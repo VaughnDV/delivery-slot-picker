@@ -1,4 +1,9 @@
 import Vue from 'vue'
+
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 import store from '@/store'
 import router from '@/router'
 
@@ -10,6 +15,8 @@ axios.defaults.xsrfCookieName = 'csrftoken'
 axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 
 Vue.config.productionTip = false
+
+Vue.use(BootstrapVue)
 
 new Vue({
   router,

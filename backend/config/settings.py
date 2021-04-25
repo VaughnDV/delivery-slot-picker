@@ -225,5 +225,5 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.FileUploadParser'
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 9
+    'PAGE_SIZE': 12
 }
