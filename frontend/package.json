@@ -3,14 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "npm i && vue-cli-service serve",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:staging": "vue-cli-service build --mode staging",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:e2e": "vue-cli-service test:e2e",
+    "test:unit": "vue-cli-service test:unit",
+    "deploy": "vue-cli-service build && deploy_staging.sh",
+    "deploy:staging": "vue-cli-service build --mode staging && deploy_staging.sh",
+    "deploy:production": "vue-cli-service build --mode production && deploy_production.sh"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "bootstrap-vue": "^2.21.2",
+    "axios": "^0.18.0",
     "register-service-worker": "^1.5.2",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
@@ -26,9 +30,17 @@
     "@vue/test-utils": "^1.0.0-beta.24",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.4.2",
+    "bootstrap": "^4.3.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.17"
+    "vue-select": "^3.2.0",
+    "vue-sweetalert2": "^3.0.3",
+    "vue-template-compiler": "^2.5.17",
+    "vue-toasted": "^1.1.27",
+    "vuejs-datepicker": "^1.6.2",
+    "vuex-persistedstate": "^2.7.0"
   },
   "eslintConfig": {
     "root": true,

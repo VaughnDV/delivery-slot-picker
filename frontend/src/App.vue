@@ -1,24 +1,21 @@
 <template lang="html">
   <div>
+    <div id="nav">
+      <router-link to="/">User</router-link>
+       | <router-link :to="{ name: 'pick-slots' }">Delivery Slots</router-link>
+      | <router-link :to="{ name: 'register' }">Register</router-link>
+    </div>
+
     <router-view/>
   </div>
 </template>
 
 <script>
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+
+  }
 }
 </script>
-
-<style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    color: #2c3e50;
-  }
-  main.container {
-    border: 1px solid #cccccc;
-    margin-top: 4em;
-    padding: 2em;
-    width: 600px;
-  }
-</style>
