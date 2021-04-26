@@ -10,7 +10,9 @@ slot pickerthat generates a group of dates and delivery slots for selection
 
 ## Development
 
-Install [Docker](https://docs.docker.com/install/) and [Docker-Compose](https://docs.docker.com/compose/). Start your virtual machines with the following shell command:
+Install [Docker](https://docs.docker.com/install/) and [Docker-Compose](https://docs.docker.com/compose/). Start your virtual machines with the following shell commands:
+
+if its your first time and you dont have `node_modules` setup, run `docker-compose run frontend npm install`
 
 `docker-compose up --build`
 
@@ -30,6 +32,6 @@ Interact with the API and Admin Panel
 
 `http://0.0.0.0:8000/admin`
 
-## Running tests
+## Running tests for the backend
 
 `docker-compose run backend pytest`

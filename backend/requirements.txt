@@ -45,6 +45,7 @@ Werkzeug==1.0.1
 djangorestframework==3.12.1
 pytest-django==4.1.0
 pytest-pythonpath==0.7.3
+django-cors-headers==3.7.0
 
 
 

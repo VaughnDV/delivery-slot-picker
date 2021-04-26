@@ -5,6 +5,7 @@ const state = {
   profile: {},
   validation: { email: true },
   authError: false
+
 }
 
 const getters = {}
@@ -25,12 +26,24 @@ const mutations = {
   setAuthError (state, bool) {
     state.authError = bool
   }
+
 }
 
 const actions = {
+
   postLogin (context, payload) {
     return axios.post('/api/users/login/', payload)
-      .then(response => {})
+      .then(response => {
+        context.commit('login')
+        context.commit('setProfile', response.data)
+      })
+      .catch(e => {
+        context.commit('setAuthError', true)
+        console.log(e)
+      })
+  },
+  postPasswordReset (context, payload) {
+    return axios.post('/api/users/password-reset/', payload)
       .catch(e => {
         context.commit('setAuthError', true)
         console.log(e)
@@ -60,6 +73,7 @@ const actions = {
         console.log(e)
       })
   }
+
 }
 
 export default {
