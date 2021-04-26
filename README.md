@@ -24,6 +24,11 @@ For manual testing one should generate delivery slots for the next 4 weeks:
 
 In production this can be set to run a daily cronjob to ensure that there are always 4 weeks of delivery slots generated
 
+Interact with the API and Admin Panel
+
+`http://0.0.0.0:8000/api`
+
+`http://0.0.0.0:8000/admin`
 
 ## Running tests
 
